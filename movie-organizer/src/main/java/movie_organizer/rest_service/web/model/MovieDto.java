@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 @Document(collection ="movies")
-public class Movie {
+public class MovieDto {
 	@Id
 	@Null
 	private String  id;
