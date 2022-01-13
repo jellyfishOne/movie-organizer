@@ -10,7 +10,7 @@ import movie_organizer.rest_service.web.model.MovieDto;
 import movie_organizer.rest_service.web.model.MovieGenreEnum;
 
 @Repository
-public interface MoviesRepository extends MongoRepository<MovieDto, String>{
+public interface MovieRepository extends MongoRepository<MovieDto, String>{
 	
 	Optional<MovieDto> findById(String Id);
 	Optional<MovieDto> findByTitle(String title);
