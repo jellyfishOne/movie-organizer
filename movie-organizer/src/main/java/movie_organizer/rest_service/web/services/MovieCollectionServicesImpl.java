@@ -18,7 +18,6 @@ public class MovieCollectionServicesImpl implements MovieCollectionServices{
 	
 	@Override
 	public MovieDto saveNewMovie(MovieDto newMovie) {
-		//TODO Validate movie object
 		movieRepo.save(newMovie);
 		return newMovie;
 	}

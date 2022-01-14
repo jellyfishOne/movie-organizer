@@ -6,9 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
+@Builder
 @AllArgsConstructor
 @Data
-@Builder
 public class Actor {
 	private String firtName;
 	private String surName;
