@@ -11,6 +11,6 @@ public interface MovieCollectionServices {
 	
 	Optional<MovieDto> getMovieWithId(String movieId); 
 	Optional<MovieDto> getMovieWithTitle(String movieTitle);
-	List<MovieDto> getMoviesWithGenre(MovieGenreEnum genre);
+	//List<MovieDto> getMoviesWithGenre(MovieGenreEnum genre);
 	List<MovieDto> getMoviesWitActorFirstName(String firstName);
 }

@@ -43,13 +43,21 @@ class RestServiceApplicationTests {
 				 .firtName("firtName")
 				 .surName("SurName").build();
 		actors.add(actor);
-		
 		directors = new ArrayList<Director>();
+		director = Director.builder()
+							.firstName("FIrstName")
+							.lastName("Last Name").build();
+		directors.add(director);
 		screenwriters = new ArrayList<Screenwriter>();
+		screenwriter = Screenwriter.builder()
+				.firstName("FIrstName")
+				.lastName("Last Name").build();
+		screenwriters.add(screenwriter);
 		producers = new ArrayList<Producer>();
-		
-		
-		
+		producer = Producer.builder()
+				.firstName("FIrstName")
+				.lastName("Last Name").build();
+		producers.add(producer);
 		movie =  MovieDto.builder()
 				.title("The Batman")
 				.gengre(MovieGenreEnum.ACTION) 
