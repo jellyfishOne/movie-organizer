@@ -14,7 +14,9 @@ public interface MovieRepository extends MongoRepository<MovieDto, String>{
 	
 	Optional<MovieDto> findById(String Id);
 	Optional<MovieDto> findByTitle(String title);
+	
 	//List<MovieDto> findAll(MovieGenreEnum genre);
+	List<MovieDto> findByGenre(MovieGenreEnum genre);
 	
 	List<MovieDto> findByStarring(String firstName);
 	

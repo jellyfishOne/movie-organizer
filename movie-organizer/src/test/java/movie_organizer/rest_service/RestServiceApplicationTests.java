@@ -60,7 +60,7 @@ class RestServiceApplicationTests {
 		producers.add(producer);
 		movie =  MovieDto.builder()
 				.title("The Batman")
-				.gengre(MovieGenreEnum.ACTION) 
+				.genre(MovieGenreEnum.ACTION) 
 				.releaseDate(dateNow) 
 				.runTimeInMinutes(190)
 				.movieRating(MovieRatingEnum.R_RESTRICTED) 

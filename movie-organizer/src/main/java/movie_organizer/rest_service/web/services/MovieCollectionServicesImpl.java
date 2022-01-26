@@ -32,10 +32,11 @@ public class MovieCollectionServicesImpl implements MovieCollectionServices{
 		return movieRepo.findByTitle(movieTitle);
 	}
 
-	/*
-	 * @Override public List<MovieDto> getMoviesWithGenre(MovieGenreEnum genre) {
-	 * return movieRepo.findAll(genre); }
-	 */
+	
+	@Override public List<MovieDto> getMoviesWithGenre(MovieGenreEnum genre) {
+	return movieRepo.findByGenre(genre);
+	}
+	 
 
 	@Override
 	public List<MovieDto> getMoviesWitActorFirstName(String firstName) {

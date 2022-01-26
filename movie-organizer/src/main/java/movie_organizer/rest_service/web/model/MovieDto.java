@@ -35,7 +35,7 @@ public class MovieDto {
 	private String title;
 	
 	@NotNull
-	private MovieGenreEnum gengre;
+	private MovieGenreEnum genre;
 	
 	@NotNull
 	private LocalDate releaseDate;
