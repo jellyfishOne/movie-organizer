@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -59,6 +60,7 @@ class RestServiceApplicationTests {
 				.lastName("Last Name").build();
 		producers.add(producer);
 		movie =  MovieDto.builder()
+				.id("1")
 				.title("The Batman")
 				.genre(MovieGenreEnum.ACTION) 
 				.releaseDate(dateNow) 
@@ -77,5 +79,28 @@ class RestServiceApplicationTests {
 		assertNotNull(savedMovie);
 	}
 	
+	@Test
+	void getMovieWIthId() {
+		Optional<MovieDto> movieById = movieServices.getMovieWithId(movie.getId());
+		assertNotNull(movieById);
+	}
+	
+	@Test
+	void getMovieWtihTitle() {
+		Optional<MovieDto> movieByTitle = movieServices.getMovieWithId(movie.getTitle());
+		assertNotNull(movieByTitle);
+	}
+	
+	@Test
+	void getMoviesWithGenre() {
+		List<MovieDto> moviesWithGenre = movieServices.getMoviesWithGenre(MovieGenreEnum.ACTION);
+		assertNotNull(moviesWithGenre);
+	}
+	
+	@Test
+	void getMoviesWithActorFirstName() {
+		List<MovieDto> moviesWithActorFirstName = movieServices.getMoviesWitActorFirstName("FirstName");
+		assertNotNull(moviesWithActorFirstName);
+	}
 	
 }
